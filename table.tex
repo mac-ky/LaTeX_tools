@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{multirow}
+
+\begin{document}
+
+% 単純な表
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Header 1 & Header 2 & Header 3 \\
+        \hline
+        Row 1, Col 1 & Row 1, Col 2 & Row 1, Col 3 \\
+        \hline
+        Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\
+        \hline
+        Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 \\
+        \hline
+    \end{tabular}
+    \caption{Basic Table Example}
+    \label{tab:basic_table}
+\end{table}
+
+% 複数列を結合した表
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{Merged Columns} & Header 3 \\
+        \hline
+        Row 1, Col 1 & Row 1, Col 2 & Row 1, Col 3 \\
+        \hline
+        Row 2, Col 1 & \multicolumn{2}{c|}{Merged Columns across Col 2 and Col 3} \\
+        \hline
+        Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 \\
+        \hline
+    \end{tabular}
+    \caption{Table with \texttt{\textbackslash multicolumn}}
+    \label{tab:multicolumn_table}
+\end{table}
+
+% 複数の行を結合した表
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multirow{3}{*}{Multirow} & Col 2, Row 1 & Col 3, Row 1 \\
+        \cline{2-3}
+        & Col 2, Row 2 & Col 3, Row 2 \\
+        \cline{2-3}
+        & Col 2, Row 3 & Col 3, Row 3 \\
+        \hline
+    \end{tabular}
+    \caption{Table with \texttt{\textbackslash multirow}}
+    \label{tab:multirow_table}
+\end{table}
+
+\end{document}
