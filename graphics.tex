@@ -3,9 +3,10 @@
 \usepackage{amssymb} %数式記号
 \usepackage{amsmath} %数式
 \usepackage[utf8]{inputenc} %発音区別符アルファベットの直接入力
-\begin{document}
-\[\documentclass{article}
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
 \usepackage{graphicx}
+\captionsetup{compatibility=false}
 
 \begin{document}
 
@@ -21,20 +22,18 @@
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{image1.png}
-        \caption{Figure 1}
+        \subcaption{Figure 1}
         \label{fig:1}
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{image2.png}
-        \caption{Figure 2}
+        \subcaption{Figure 2}
         \label{fig:2}
     \end{minipage}
     \caption{Multiple figures side by side using minipage}
     \label{fig:multi_figures}
 \end{figure}
 
-\end{document}
-\]
 \end{document}
